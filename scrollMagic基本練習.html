@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/TweenMax.min.js"></script>
+  <script src="./js/ScrollMagic.min.js"></script>
+  <script src="./js/debug.addIndicators.min.js"></script>
+  <script src="./js/animation.gsap.min.js"></script>
+  <title>scrollMagic基本練習</title>
+</head>
+
+<body class="practice2">
+  <div class="practice2-content">
+    <header>我是header</header>
+    <div class="fly-content">
+      <img src="./images/airplane.png" alt="" class="fly">
+    </div>
+    <footer>
+      我是footer
+    </footer>
+  </div>
+
+</body>
+
+</html>
+<script>
+  $(document).ready(function () {
+    const flightPath = {
+      curvines: 1.25, //曲線角度
+      autoRotate: true,
+      values: [{
+          x: 100,
+          y: -50
+        },
+        {
+          x: 300,
+          y: 50
+        },
+        {
+          x: 500,
+          y: 50
+        },
+        {
+          x: 650,
+          y: -100
+        },
+        {
+          x: 350,
+          y: 50
+        },
+        {
+          x: 800,
+          y: 50
+        },
+        {
+          x: $(window).width(),
+          y: 300
+        },
+      ]
+    }
+    const tween = new TimelineMax()
+    tween.add(
+      TweenMax.to('.fly', 5, {
+        bezier: flightPath,
+        ease: Power1.easeInOut
+      })
+    )
+    const controller = new ScrollMagic.Controller()
+    const scene = new ScrollMagic.Scene({
+        triggerElement: '.fly-content',
+        duration: '100%',
+        triggerHook: 0,
+        offset: 100 //指的是 觸發該元件下方多少距離 EX: .fly-content 的 下方100位置處開始執行效果
+      })
+      .setTween(tween) //將此物件加入scroll操作
+      .setPin('.fly-content') //綁定此元素的視角
+      .addIndicators()
+      .addTo(controller)
+  })
+</script>
