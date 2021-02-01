@@ -35,7 +35,7 @@ $(document).ready(function () {
       ease: Power0.easeNone
     }, 0)
     .from('.bg', 2, {
-      y: '-40%',
+      y: '-30%',
       ease: Power0.easeNone
     }, 0)
   const slideParallaxScene = new ScrollMagic.Scene({
