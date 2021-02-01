@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+body {
+  margin: 0 auto;
+  font-family: 'Noto Sans TC', sans-serif; }
+
+.top,
+.center,
+.bottom {
+  height: 700px;
+  position: relative; }
+  .top > p,
+  .center > p,
+  .bottom > p {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+    margin: 0; }
+
+.top {
+  background-color: rgba(255, 160, 160, 0.979); }
+
+.center {
+  background-color: rgba(217, 255, 146, 0.979);
+  opacity: 0;
+  transition: ease-in-out 1s; }
+
+.bottom {
+  background-color: rgba(140, 167, 255, 0.979);
+  transition: ease-in-out 1s;
+  opacity: 0; }
+
+.fade-in {
+  opacity: 1; }
+
+.main {
+  background-color: #fff;
+  position: relative; }
+
+.bgc {
+  padding: 100px 0px;
+  color: #fff;
+  background-color: #977c7c;
+  text-align: center;
+  position: relative;
+  overflow: hidden; }
+  .bgc-wrap {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; }
+  .bgc .bg {
+    background: url(../images/bg-1x.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 140%;
+    top: 0px;
+    z-index: 1;
+    opacity: 0.7; }
+
+.Section-wipes {
+  height: 700px;
+  margin: 0 auto;
+  position: relative; }
+  .Section-wipes #pinContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  .Section-wipes .panel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center; }
+  .Section-wipes .blue {
+    background-color: blue; }
+  .Section-wipes .turqoise {
+    background-color: pink; }
+  .Section-wipes .bordeaux {
+    background-color: red; }
+  .Section-wipes .green {
+    background-color: green; }
+  .Section-wipes b {
+    font-size: 15px;
+    color: white;
+    position: relative;
+    display: block;
+    height: 0;
+    overflow: visible;
+    top: 50%; }
+
+.number-content {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #000;
+  padding: 20px; }
+
+.number-show {
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 0.4rem;
+  font-weight: bold;
+  text-align: center; }
+
+.practice1 {
+  height: 100vh; }
+
+.practice1-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; }
+
+.boxx {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  margin: 0px 10px; }
+
+.practice2 {
+  height: 100vh;
+  position: relative; }
+  .practice2 header,
+  .practice2 footer {
+    height: 100vh;
+    text-align: center;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .practice2 .fly-content {
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    overflow: hidden; }
+    .practice2 .fly-content .fly {
+      width: 100px;
+      position: absolute;
+      top: 50%;
+      left: 0px; }
+
+/*# sourceMappingURL=main.css.map */
